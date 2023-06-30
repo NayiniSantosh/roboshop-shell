@@ -9,7 +9,7 @@ useradd roboshop &>>/tmp/roboshop.log
 
 echo -e "\e[34mCreate Application Directory\e[0m"
 rm -rf /app &>>/tmp/roboshop.log
-mkdir /app &>>/tmp/roboshop.log
+mkdir /app
 
 echo -e "\e[34mDownload Appliation Content\e[0m"
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
@@ -17,7 +17,7 @@ cd /app
 
 echo -e "\e[34mExtract Appliation Content\e[0m"
 unzip /tmp/catalogue.zip &>>/tmp/roboshop.log
-cd /app &>>/tmp/roboshop.log
+cd /app
 
 echo -e "\e[34mInstall NodeJS Dependencies\e[0m"
 npm install &>>/tmp/roboshop.log
