@@ -5,8 +5,9 @@ echo -e "\e[34mInstalling MongoDB Server\e[0m"
 yum install mongodb-org -y &>>/tmp/roboshop.log
 
 
+echo -e "\e[34mUpdate MongoDB Listen Address\e[0m"
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 
-#modify the config file(localhost(127.0.0.1))
 echo -e "\e[34mStart MongoDB Server\e[0m"
 systemctl enable mongod &>>/tmp/roboshop.log
 systemctl restart mongod &>>/tmp/roboshop.log
