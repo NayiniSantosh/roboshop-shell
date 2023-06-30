@@ -13,7 +13,7 @@ curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shippin
 cd /app
 
 echo -e "\e[34m Extract Application Content \e[0m"
-unzip /tmp/shipping.zip
+unzip /tmp/shipping.zip &>>/tmp/roboshop.log
 
 echo -e "\e[34m Download Maven Dependencies \e[0m"
 mvn clean package &>>/tmp/roboshop.log
