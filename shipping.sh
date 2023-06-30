@@ -24,7 +24,7 @@ echo -e "\e[34m Install MySQL Client \e[0m"
 yum install mysql -y &>>/tmp/roboshop.log
 
 echo -e "\e[34m Load Schema \e[0m"
-mysql -h mysql-dev.sandevops.site -uroot -pRoboShop@1 < /app/schema/shipping.sql &>>/tmp/roboshop.log
+mysql -h mysql-dev.sandevops.site -uroot -pRoboShop@1 </app/schema/shipping.sql &>>/tmp/roboshop.log
 
 echo -e "\e[34m Setup SystemD File \e[0m"
 cp /home/centos/roboshop-shell/shipping.service /etc/systemd/system/shipping.service &>>/tmp/roboshop.log
